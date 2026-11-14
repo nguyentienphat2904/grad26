@@ -47,7 +47,7 @@ export const translations: Record<Language, Translations> = {
         description:
           'Nhập tên khách mời dưới đây để tạo đường dẫn thiệp mời riêng có in tên khách mời trên thiệp.',
         inputLabel: 'Tên Khách Mời:',
-        inputPlaceholder: 'Ví dụ: Nguyễn Ngọc Diệu Hà',
+        inputPlaceholder: 'Ví dụ: Nguyễn Tiến Phát',
         previewLabel: 'Liên Kết Được Tạo:',
         copyButton: 'Sao Chép Liên Kết',
         copiedButton: 'Đã Sao Chép!',
@@ -158,7 +158,7 @@ export const translations: Record<Language, Translations> = {
         description:
           'Enter a guest’s name below to create a direct invitation link with their name printed on this card.',
         inputLabel: 'Guest Name:',
-        inputPlaceholder: 'e.g. Nguyen Ngoc Dieu Ha',
+        inputPlaceholder: 'e.g. Nguyen Tien Phat',
         previewLabel: 'Generated Link:',
         copyButton: 'Copy Invitation Link',
         copiedButton: 'Link Copied!',
