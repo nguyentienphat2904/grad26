@@ -1,0 +1,286 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+  padding: 1rem 0;
+}
+
+.headerScrolled {
+  background-color: rgba(245, 242, 235, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 18px rgba(66, 109, 131, 0.08);
+  padding: 0.65rem 0;
+  border-bottom: 1px solid rgba(229, 223, 211, 0.6);
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand */
+.brandButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: var(--radius-sm);
+  transition: opacity 0.2s ease;
+}
+
+.brandButton:hover {
+  opacity: 0.85;
+}
+
+.brandLogo {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.08em;
+  color: var(--color-primary-blue);
+}
+
+.brandBadge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-dark-blue);
+  background-color: var(--color-light-blue-soft);
+  border: 1px solid var(--color-light-blue);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-pill);
+}
+
+/* Desktop Links */
+.desktopLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--color-border-delicate);
+  padding: 0.25rem 0.4rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.navLink {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-dark-blue);
+  padding: 0.4rem 0.95rem;
+  border-radius: var(--radius-pill);
+  transition: all 0.2s ease;
+}
+
+.navLink:hover {
+  color: var(--color-primary-blue);
+  background-color: rgba(199, 229, 239, 0.4);
+}
+
+.active {
+  color: var(--color-white) !important;
+  background-color: var(--color-primary-blue) !important;
+}
+
+/* Nav Actions */
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* Language Switcher */
+.langSwitchWrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--color-border-card);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.langIcon {
+  color: var(--color-dark-blue);
+  opacity: 0.7;
+  margin-right: 0.1rem;
+}
+
+.langBtn {
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+  padding: 0.15rem 0.35rem;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+
+.langBtn:hover {
+  color: var(--color-primary-blue);
+}
+
+.langActive {
+  color: var(--color-primary-blue) !important;
+  background-color: var(--color-light-blue-soft);
+}
+
+.langDivider {
+  font-size: 0.72rem;
+  color: var(--color-border-card);
+  user-select: none;
+}
+
+.confettiPill {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border-card);
+  color: var(--color-primary-blue);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.confettiPill:hover {
+  background-color: var(--color-light-blue-soft);
+  transform: rotate(15deg) scale(1.05);
+}
+
+.directionsPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: var(--color-primary-blue);
+  color: var(--color-white) !important;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.48rem 1rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 3px 8px rgba(22, 142, 213, 0.25);
+  transition: all 0.2s ease;
+}
+
+.directionsPill:hover {
+  background-color: var(--color-primary-blue-hover);
+  transform: translateY(-1px);
+}
+
+.mobileToggle {
+  display: none;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-dark-blue);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border-card);
+  border-radius: var(--radius-sm);
+}
+
+/* Mobile Drawer */
+.mobileDrawer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--color-bg-card);
+  border-bottom: 1px solid var(--color-border-card);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
+  padding: 1.25rem 1.5rem;
+}
+
+.mobileLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.mobileLangRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem 0.5rem 0.85rem;
+  border-bottom: 1px dashed var(--color-border-delicate);
+}
+
+.mobileLangLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-dark-blue);
+}
+
+.mobileLangButtons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.mobileLangBtn {
+  padding: 0.55rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border-card);
+  color: var(--color-text);
+  transition: all 0.2s ease;
+}
+
+.mobileLangActive {
+  background-color: var(--color-primary-blue) !important;
+  color: var(--color-white) !important;
+  border-color: var(--color-primary-blue) !important;
+}
+
+.mobileNavLink {
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-dark-blue);
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid var(--color-border-delicate);
+  transition: color 0.2s ease;
+}
+
+.mobileNavLink:hover {
+  color: var(--color-primary-blue);
+}
+
+.mobileDirectionsLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--color-primary-blue);
+  color: var(--color-white) !important;
+  padding: 0.8rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 820px) {
+  .desktopLinks {
+    display: none;
+  }
+  .mobileToggle {
+    display: flex;
+  }
+}

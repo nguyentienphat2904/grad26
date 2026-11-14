@@ -1,0 +1,197 @@
+/* Crystal low-poly facet wrapper */
+.crystalWrapper {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  transition: transform 0.5s ease-out;
+}
+
+.crystalSvg {
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(66, 109, 131, 0.08));
+}
+
+.top-left {
+  top: -20px;
+  left: -20px;
+  transform: rotate(-10deg);
+}
+
+.top-right {
+  top: -20px;
+  right: -20px;
+  transform: rotate(20deg) scaleX(-1);
+}
+
+.bottom-left {
+  bottom: -20px;
+  left: -20px;
+  transform: rotate(180deg);
+}
+
+.bottom-right {
+  bottom: -20px;
+  right: -20px;
+  transform: rotate(90deg);
+}
+
+.floating-left {
+  top: 40%;
+  left: -40px;
+  transform: rotate(-15deg);
+}
+
+.floating-right {
+  top: 50%;
+  right: -40px;
+  transform: rotate(15deg) scaleX(-1);
+}
+
+/* Authentic Washi Tape */
+.washiTape {
+  position: absolute;
+  height: 28px;
+  z-index: 3;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 4px rgba(85, 77, 75, 0.12));
+}
+
+.washiTapeInner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* Serrated torn edge at left and right */
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    98% 25%,
+    100% 50%,
+    97% 75%,
+    100% 100%,
+    0% 100%,
+    2% 75%,
+    0% 50%,
+    3% 25%
+  );
+  opacity: 0.88;
+}
+
+.washi-cyan .washiTapeInner {
+  background-color: #B2DDEE;
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.35),
+      rgba(255, 255, 255, 0.35) 6px,
+      transparent 6px,
+      transparent 12px
+    );
+  border-top: 1px dashed rgba(22, 142, 213, 0.25);
+  border-bottom: 1px dashed rgba(22, 142, 213, 0.25);
+}
+
+.washi-cream .washiTapeInner {
+  background-color: #EFE7DB;
+  background-image: 
+    repeating-linear-gradient(
+      -45deg,
+      rgba(199, 229, 239, 0.4),
+      rgba(199, 229, 239, 0.4) 4px,
+      transparent 4px,
+      transparent 8px
+    );
+  border-top: 1px dashed rgba(66, 109, 131, 0.2);
+  border-bottom: 1px dashed rgba(66, 109, 131, 0.2);
+}
+
+.washi-navy .washiTapeInner {
+  background-color: #A0C3D6;
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.5) 1.5px, transparent 1.5px);
+  background-size: 8px 8px;
+}
+
+.washi-pattern .washiTapeInner {
+  background-color: #C5E3EE;
+  background-image: 
+    linear-gradient(90deg, rgba(22, 142, 213, 0.15) 50%, transparent 50%),
+    linear-gradient(rgba(22, 142, 213, 0.15) 50%, transparent 50%);
+  background-size: 10px 10px;
+}
+
+/* Graduation Cap Wrapper */
+.capWrapper {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0 6px 14px rgba(22, 142, 213, 0.16));
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+.capSvg {
+  display: block;
+  overflow: visible;
+}
+
+/* Academic Stamp Seal */
+.sealWrapper {
+  display: inline-block;
+  opacity: 0.85;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.sealWrapper:hover {
+  transform: rotate(5deg) scale(1.04);
+  opacity: 1;
+}
+
+.sealSvg {
+  display: block;
+}
+
+.sealText {
+  fill: #426D83;
+  font-family: var(--font-sans);
+  font-size: 7.2px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+/* Corner Flourish */
+.cornerFlourish {
+  position: absolute;
+  pointer-events: none;
+}
+
+.flourish-tl {
+  top: 12px;
+  left: 12px;
+}
+
+.flourish-tr {
+  top: 12px;
+  right: 12px;
+  transform: scaleX(-1);
+}
+
+.flourish-bl {
+  bottom: 12px;
+  left: 12px;
+  transform: scaleY(-1);
+}
+
+.flourish-br {
+  bottom: 12px;
+  right: 12px;
+  transform: scale(-1);
+}
+
+@media (max-width: 640px) {
+  .crystalWrapper {
+    transform: scale(0.75);
+  }
+  .washiTape {
+    height: 22px;
+  }
+}

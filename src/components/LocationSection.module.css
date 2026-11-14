@@ -1,0 +1,286 @@
+.section {
+  position: relative;
+  padding: 4.5rem 1.5rem 5rem;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 2.75rem;
+}
+
+.badgeWrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.35rem;
+}
+
+.compassIcon {
+  color: var(--color-primary-blue);
+}
+
+.subTitle {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-primary-blue);
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  color: var(--color-dark-blue);
+  letter-spacing: 0.03em;
+}
+
+.headerRule {
+  width: 50px;
+  height: 2px;
+  background-color: var(--color-primary-blue);
+  margin: 0.85rem auto 0;
+  opacity: 0.65;
+}
+
+/* Card Wrapper & Washi Tape */
+.cardWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 920px;
+}
+
+.tapeLeft {
+  top: -12px;
+  left: 36px;
+}
+
+.tapeRight {
+  top: -12px;
+  right: 36px;
+}
+
+.locationCard {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border-delicate);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-letter);
+  overflow: hidden;
+}
+
+/* Top Venue Banner */
+.venueInfoBanner {
+  padding: 1.8rem 2rem;
+  background-color: #FAF8F5;
+  border-bottom: 1px solid var(--color-border-delicate);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.infoCol {
+  flex: 1;
+  min-width: 240px;
+}
+
+.infoColAddress {
+  flex: 1.2;
+  min-width: 260px;
+}
+
+.venueLabel {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-primary-blue);
+  margin-bottom: 0.25rem;
+}
+
+.venueHeading {
+  font-size: 1.2rem;
+  color: var(--color-dark-blue);
+  line-height: 1.3;
+}
+
+.venueAddress {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  font-size: 0.92rem;
+  color: var(--color-text);
+  line-height: 1.45;
+}
+
+.pinIcon {
+  color: var(--color-primary-blue);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+/* Prominent Get Directions Button */
+.directionsAction {
+  flex-shrink: 0;
+}
+
+.getDirectionsButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: var(--color-primary-blue);
+  color: var(--color-white) !important;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.8rem 1.6rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 14px rgba(22, 142, 213, 0.35);
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.getDirectionsButton:hover {
+  background-color: var(--color-primary-blue-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(22, 142, 213, 0.45);
+}
+
+.navIcon {
+  color: var(--color-white);
+  transform: rotate(-30deg);
+  transition: transform 0.2s ease;
+}
+
+.getDirectionsButton:hover .navIcon {
+  transform: rotate(0deg) scale(1.1);
+}
+
+.externalIcon {
+  opacity: 0.8;
+}
+
+/* Map Frame */
+.mapContainer {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  background-color: #E8ECEF;
+}
+
+.mapLoadingPlaceholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background-color: #FAF8F5;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.mapSpinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgba(22, 142, 213, 0.2);
+  border-top-color: var(--color-primary-blue);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.mapIframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* Footer of the Location Card */
+.cardFooter {
+  padding: 1rem 1.8rem;
+  background-color: #FAF8F5;
+  border-top: 1px solid var(--color-border-delicate);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.campusTip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 250px;
+}
+
+.tipDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--color-primary-blue);
+  flex-shrink: 0;
+}
+
+.tipText {
+  font-size: 0.84rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.openMapsLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--color-dark-blue);
+  transition: color 0.2s ease;
+}
+
+.openMapsLink:hover {
+  color: var(--color-primary-blue);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3.5rem 1rem 4rem;
+  }
+  .venueInfoBanner {
+    padding: 1.4rem 1.2rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.2rem;
+  }
+  .getDirectionsButton {
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem 1.2rem;
+  }
+  .mapContainer {
+    height: 320px;
+  }
+  .cardFooter {
+    padding: 1rem 1.2rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

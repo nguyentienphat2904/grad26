@@ -1,0 +1,399 @@
+.section {
+  position: relative;
+  padding: 4.5rem 1.5rem;
+  background-color: rgba(245, 242, 235, 0.7);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.subTitle {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-primary-blue);
+  margin-bottom: 0.4rem;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  color: var(--color-dark-blue);
+  letter-spacing: 0.03em;
+}
+
+.headerRule {
+  width: 50px;
+  height: 2px;
+  background-color: var(--color-primary-blue);
+  margin: 0.85rem auto 0;
+  opacity: 0.65;
+}
+
+/* Countdown Banner */
+.countdownBanner {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border-card);
+  border-radius: var(--radius-pill);
+  padding: 0.75rem 1.8rem;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  box-shadow: var(--shadow-paper);
+}
+
+.countdownTag {
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-dark-blue);
+  border-right: 1px solid var(--color-border-card);
+  padding-right: 1.2rem;
+}
+
+.countdownGrid {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.countdownItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 38px;
+}
+
+.countdownNum {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary-blue);
+  line-height: 1;
+}
+
+.countdownLabel {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+.countdownSeparator {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-light-blue);
+  line-height: 1;
+}
+
+/* Grid */
+.detailsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 860px;
+}
+
+.cardContainer {
+  position: relative;
+  display: flex;
+}
+
+.tapeCard1 {
+  top: -12px;
+  left: 24px;
+}
+
+.tapeCard2 {
+  top: -12px;
+  right: 24px;
+}
+
+.detailCard {
+  width: 100%;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border-delicate);
+  border-radius: var(--radius-sm);
+  padding: 2.2rem 1.8rem 1.8rem;
+  box-shadow: var(--shadow-paper);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.detailCard:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Card Header */
+.cardIconHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.iconCircle {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-light-blue-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardIcon {
+  color: var(--color-primary-blue);
+}
+
+.cardCategory {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-dark-blue);
+}
+
+/* Calendar Date Badge */
+.calendarBadge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--color-border-card);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  width: 90px;
+  margin-bottom: 1.25rem;
+}
+
+.calendarMonth {
+  background-color: var(--color-primary-blue);
+  color: var(--color-white);
+  width: 100%;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 0.2rem 0;
+}
+
+.calendarDay {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-dark-blue);
+  line-height: 1.1;
+  padding-top: 0.2rem;
+}
+
+.calendarYear {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  padding-bottom: 0.3rem;
+}
+
+/* Date / Time Typography */
+.dateTimeText {
+  flex: 1;
+}
+
+.cardPrimaryText {
+  font-size: 1.45rem;
+  color: var(--color-dark-blue);
+  margin-bottom: 0.25rem;
+}
+
+.cardSecondaryText {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.1rem;
+}
+
+.timeRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-light-blue-soft);
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-pill);
+}
+
+.timeIcon {
+  color: var(--color-primary-blue);
+}
+
+.timeText {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--color-dark-blue);
+}
+
+.timeZoneBadge {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+/* Venue Section */
+.venueBadge {
+  margin-bottom: 0.85rem;
+}
+
+.buildingTag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--color-primary-blue);
+  margin-bottom: 0.2rem;
+}
+
+.buildingName {
+  font-size: 1.6rem;
+  color: var(--color-dark-blue);
+}
+
+.venueContent {
+  flex: 1;
+  margin-bottom: 1.25rem;
+}
+
+.universityName {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.85rem;
+  line-height: 1.4;
+}
+
+.addressBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.75rem;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border-card);
+  border-radius: var(--radius-sm);
+}
+
+.addressIcon {
+  color: var(--color-primary-blue);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.addressText {
+  font-size: 0.88rem;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+/* Actions */
+.calendarActions,
+.addressActions {
+  display: flex;
+  gap: 0.65rem;
+  margin-top: 1.2rem;
+  padding-top: 1.2rem;
+  border-top: 1px dashed var(--color-border-delicate);
+}
+
+.calendarButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: var(--color-primary-blue);
+  color: var(--color-white);
+  padding: 0.55rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.calendarButton:hover {
+  background-color: var(--color-primary-blue-hover);
+  color: var(--color-white);
+  transform: translateY(-1px);
+}
+
+.icsButton {
+  padding: 0.55rem 0.85rem;
+  background-color: var(--color-light-blue-soft);
+  color: var(--color-dark-blue);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.icsButton:hover {
+  background-color: var(--color-light-blue);
+}
+
+.copyAddressButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: var(--color-bg-card);
+  color: var(--color-dark-blue);
+  border: 1px solid var(--color-border-card);
+  padding: 0.55rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+
+.copyAddressButton:hover {
+  border-color: var(--color-primary-blue);
+  color: var(--color-primary-blue);
+  background-color: var(--color-white);
+}
+
+.successIcon {
+  color: #10B981;
+}
+
+@media (max-width: 768px) {
+  .detailsGrid {
+    grid-template-columns: 1fr;
+  }
+  .countdownBanner {
+    flex-direction: column;
+    gap: 0.65rem;
+    padding: 0.9rem 1.4rem;
+  }
+  .countdownTag {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 1px solid var(--color-border-card);
+    padding-bottom: 0.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .detailCard {
+    padding: 1.8rem 1.2rem 1.4rem;
+  }
+  .calendarActions,
+  .addressActions {
+    flex-wrap: wrap;
+  }
+}

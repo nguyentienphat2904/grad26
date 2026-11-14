@@ -1,0 +1,385 @@
+.section {
+  position: relative;
+  padding: 4rem 1.5rem 5rem;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Badge */
+.sectionBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.95rem;
+  background-color: rgba(199, 229, 239, 0.4);
+  border: 1px solid rgba(22, 142, 213, 0.25);
+  border-radius: var(--radius-pill);
+  color: var(--color-dark-blue);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.heartIcon {
+  color: var(--color-primary-blue);
+}
+
+/* Card Wrapper & Washi Tape placement */
+.cardWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 660px;
+}
+
+.tapeTopLeft {
+  top: -14px;
+  left: 28px;
+}
+
+.tapeTopRight {
+  top: -14px;
+  right: 28px;
+}
+
+/* Printed Invitation Card */
+.invitationCard {
+  position: relative;
+  background-color: var(--color-bg-letter);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-letter);
+  padding: 1.5rem;
+  border: 1px solid var(--color-border-delicate);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardInnerBorder {
+  position: relative;
+  border: 1px solid rgba(66, 109, 131, 0.22);
+  border-radius: var(--radius-sm);
+  padding: 2.75rem 2rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #FAF8F5;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(199, 229, 239, 0.2) 0%, transparent 60%);
+}
+
+/* Header */
+.cardHeader {
+  margin-bottom: 1.25rem;
+}
+
+.scriptGreeting {
+  font-family: var(--font-script);
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  color: var(--color-primary-blue);
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.hostName {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 3.8vw, 2.35rem);
+  color: var(--color-dark-blue);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
+}
+
+.hostSub {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+}
+
+/* Card Divider */
+.cardDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  width: 100%;
+  max-width: 320px;
+  margin: 1.2rem 0 1.6rem;
+}
+
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(22, 142, 213, 0.4) 50%,
+    transparent
+  );
+}
+
+.dividerDiamond {
+  color: var(--color-primary-blue);
+  font-size: 0.75rem;
+  opacity: 0.75;
+}
+
+/* Guest section */
+.guestSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.cordialText {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.guestNameBox {
+  position: relative;
+  display: inline-block;
+  padding: 0.4rem 1.6rem 0.5rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 2px solid var(--color-primary-blue);
+}
+
+.guestNameHighlight {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 3.8vw, 2.2rem);
+  font-weight: 700;
+  color: var(--color-dark-blue);
+  letter-spacing: 0.03em;
+  word-break: break-word;
+}
+
+.invitationBody {
+  font-family: var(--font-sans);
+  font-size: clamp(0.98rem, 2vw, 1.12rem);
+  line-height: 1.7;
+  color: var(--color-text);
+  max-width: 480px;
+}
+
+/* Card Footer */
+.cardFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1.2rem;
+  width: 100%;
+}
+
+.sealContainer {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.sealContainer:active {
+  transform: scale(0.95);
+}
+
+.cardActionWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.celebrateButton,
+.personalizeButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.15rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  transition: all 0.2s ease;
+}
+
+.celebrateButton {
+  background-color: var(--color-primary-blue);
+  color: var(--color-white);
+  box-shadow: 0 3px 10px rgba(22, 142, 213, 0.25);
+}
+
+.celebrateButton:hover {
+  background-color: var(--color-primary-blue-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 14px rgba(22, 142, 213, 0.35);
+}
+
+.personalizeButton {
+  background-color: var(--color-white);
+  color: var(--color-dark-blue);
+  border: 1px solid var(--color-border-card);
+}
+
+.personalizeButton:hover {
+  border-color: var(--color-primary-blue);
+  color: var(--color-primary-blue);
+  transform: translateY(-1px);
+}
+
+/* Modal for generating personalized links */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(44, 75, 92, 0.45);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1.5rem;
+}
+
+.modalCard {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border-card);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+  animation: floatGentle 0.3s ease-out;
+}
+
+.modalTitle {
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-dark-blue);
+}
+
+.modalDescription {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.4rem;
+  line-height: 1.5;
+}
+
+.inputGroup {
+  margin-bottom: 1.25rem;
+}
+
+.inputLabel {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-dark-blue);
+  margin-bottom: 0.4rem;
+}
+
+.textInput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-family: var(--font-sans);
+  border: 1px solid var(--color-border-card);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-white);
+  color: var(--color-text);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.textInput:focus {
+  border-color: var(--color-primary-blue);
+  box-shadow: 0 0 0 3px rgba(22, 142, 213, 0.15);
+}
+
+.previewBox {
+  background-color: var(--color-white);
+  border: 1px dashed var(--color-light-blue);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.previewLabel {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.25rem;
+}
+
+.previewUrl {
+  display: block;
+  font-family: monospace;
+  font-size: 0.82rem;
+  color: var(--color-primary-blue);
+  word-break: break-all;
+}
+
+.modalActions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+.copyLinkButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: var(--color-primary-blue);
+  color: var(--color-white);
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.copyLinkButton:hover {
+  background-color: var(--color-primary-blue-hover);
+}
+
+.closeModalButton {
+  padding: 0.65rem 1.1rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  background-color: transparent;
+  border-radius: var(--radius-sm);
+  transition: color 0.2s ease;
+}
+
+.closeModalButton:hover {
+  color: var(--color-text);
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 3rem 1rem 3.5rem;
+  }
+  .cardInnerBorder {
+    padding: 2.2rem 1.2rem 1.8rem;
+  }
+  .tapeTopLeft {
+    left: 12px;
+  }
+  .tapeTopRight {
+    right: 12px;
+  }
+  .modalCard {
+    padding: 1.5rem;
+  }
+}
