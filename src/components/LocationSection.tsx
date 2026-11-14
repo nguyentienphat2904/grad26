@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navigation, MapPin, ExternalLink, Compass } from 'lucide-react';
+import { MapPin, ExternalLink, Compass } from 'lucide-react';
 import { eventData } from '../data/event';
 import { useI18n } from '../i18n';
 import { WashiTape, CrystalPattern } from './DecorativeElements';
