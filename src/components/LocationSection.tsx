@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navigation, MapPin, ExternalLink } from 'lucide-react';
+import { Navigation, MapPin, ExternalLink, Compass } from 'lucide-react';
 import { eventData } from '../data/event';
 import { useI18n } from '../i18n';
 import { WashiTape, CrystalPattern } from './DecorativeElements';
@@ -54,9 +54,8 @@ export const LocationSection: React.FC = () => {
                   className={styles.getDirectionsButton}
                   aria-label={`${t.location.getDirections} (Google Maps)`}
                 >
-                  <Navigation size={18} className={styles.navIcon} />
+                  <Compass size={18} className={styles.navIcon} />
                   <span>{t.location.getDirections}</span>
-                  <ExternalLink size={14} className={styles.externalIcon} />
                 </a>
               </div>
             </div>

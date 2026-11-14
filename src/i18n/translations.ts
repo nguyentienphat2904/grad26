@@ -166,7 +166,7 @@ export const translations: Record<Language, Translations> = {
       },
     },
     details: {
-      subTitle: 'Date & Gathering Venue',
+      subTitle: '',
       title: 'Event Details',
       countdown: {
         tag: 'Countdown to Ceremony',
